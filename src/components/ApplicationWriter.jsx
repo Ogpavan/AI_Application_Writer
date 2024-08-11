@@ -4,7 +4,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { FaWandMagicSparkles } from 'react-icons/fa6';
  
 import { MdFileDownload } from 'react-icons/md';
-require('dotenv').config()
+ 
 
 const ApplicationWriter = () => {
     const [formData, setFormData] = useState({
@@ -23,7 +23,7 @@ const ApplicationWriter = () => {
     
     const contentRef = useRef(null);
 
-    const apiKey = 'AIzaSyA7_E_faNlLw7AwgushI-zXBwB4aGZrKYY';
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
     const genAI = new GoogleGenerativeAI(apiKey);
 
     const model = genAI.getGenerativeModel({
