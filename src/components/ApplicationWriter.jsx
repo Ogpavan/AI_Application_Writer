@@ -2,8 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { FaWandMagicSparkles } from 'react-icons/fa6';
-import { GoDownload } from 'react-icons/go';
+ 
 import { MdFileDownload } from 'react-icons/md';
+require('dotenv').config()
 
 const ApplicationWriter = () => {
     const [formData, setFormData] = useState({
